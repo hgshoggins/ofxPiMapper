@@ -13,9 +13,9 @@ MediaServer::MediaServer():
 	usb0ImageWatcher(USB0_IMAGES_DIR, SourceType::SOURCE_TYPE_IMAGE),
 	usb1ImageWatcher(USB1_IMAGES_DIR, SourceType::SOURCE_TYPE_IMAGE),
 	usb2ImageWatcher(USB2_IMAGES_DIR, SourceType::SOURCE_TYPE_IMAGE),
-	usb3ImageWatcher(USB3_IMAGES_DIR, SourceType::SOURCE_TYPE_IMAGE),
-	imageWatcher(ofToDataPath(DEFAULT_IMAGES_DIR, true), SourceType::SOURCE_TYPE_IMAGE),
-	videoWatcher(ofToDataPath(DEFAULT_VIDEOS_DIR, true), SourceType::SOURCE_TYPE_VIDEO)
+	usb3ImageWatcher(USB3_IMAGES_DIR, SourceType::SOURCE_TYPE_IMAGE)
+//	imageWatcher(ofToDataPath(DEFAULT_IMAGES_DIR, true), SourceType::SOURCE_TYPE_IMAGE),
+//	videoWatcher(ofToDataPath(DEFAULT_VIDEOS_DIR, true), SourceType::SOURCE_TYPE_VIDEO)
 {
 	// By initialising all above we also copy files from external media
 	// to the ofxPiMapper storage.
