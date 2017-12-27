@@ -1,12 +1,15 @@
 //
 // CircleSurface.h
 // Copyright (c) 2017 Cristobal Mendoza
+// With modifications by Krisjanis Rijnieks (c) 2017
 // http://cuppetellimendoza.com
 
 #ifndef OFXPIMAPPER_CIRCLESURFACE_H
 #define OFXPIMAPPER_CIRCLESURFACE_H
 
 #include "QuadSurface.h"
+#include "Vec2.h"
+#include "Vec3.h"
 
 #define CIRCLE_SURFACE_STRINGIFY(A) #A
 
@@ -18,7 +21,6 @@ class CircleSurface : public QuadSurface {
 		CircleSurface();
 		CircleSurface(QuadSurface &surface);
 		int getType() override;
-		~CircleSurface();
 		void draw() override;
 		void setup() override;
 
@@ -36,20 +38,20 @@ class CircleSurface : public QuadSurface {
 		bool updateMask;
 		bool maskIsReady;
 
-//		string glESFragmentShader;
-//		string glESVertexShader;
+//		std::string glESFragmentShader;
+//		std::string glESVertexShader;
 //
-//		string gl2FragmentShader;
-//		string gl2VertexShader;
+//		std::string gl2FragmentShader;
+//		std::string gl2VertexShader;
 
 		ofMesh maskMesh;
 
 		// TODO: gl3 Shaders
-//		string          gl3VertexShader;
-//		string          gl3FragmentShader;
+//		std::string          gl3VertexShader;
+//		std::string          gl3FragmentShader;
 
 	private:
-		std::vector<ofVec2f> defaultTexCoords;
+		std::vector<Vec2> defaultTexCoords;
 		// We will use this pointer to determine if the source has changed.
 		// This is a total kludge, but it keeps me from messing with the
 		// upstream source.

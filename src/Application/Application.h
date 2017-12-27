@@ -1,5 +1,7 @@
 #pragma once
 
+#include <string>
+
 // OpenFrameworks components
 #include "ofEvents.h"
 #include "ofLog.h"
@@ -9,6 +11,7 @@
 #include "Info.h"
 #include "SurfaceStack.h"
 #include "Gui.h"
+#include "Vec2.h"
 
 // Commands
 #include "SetApplicationModeCmd.h"
@@ -86,11 +89,11 @@ class Application {
 		void addFboSource(FboSource * fboSource);
 		void createSurface(SurfaceType type);
 		void eraseSurface(int i);
-		void setInfoText(string text);
+		void setInfoText(std::string text);
 		void toggleInfo();
 		void togglePerspective();
 		void saveProject();
-		bool loadXmlSettings(string fileName);
+		bool loadXmlSettings(std::string fileName);
 
 		bool isShiftKeyDown();
 
@@ -113,7 +116,7 @@ class Application {
 		Moves vertex when in projection mapping mode.
 		Moves texture coordinate when in texture mapping mode.
 		*/
-		void moveSelection(ofVec2f by);
+		void moveSelection(Vec3 by);
 
 		void setPresentationMode();
 		void setTextureMode();
@@ -125,13 +128,13 @@ class Application {
 		void scaleDown();
 		void duplicateSurface();
 		void setNextSource();
-		void setFboSource(string sourceId);
+		void setFboSource(std::string sourceId);
 		void addGridRow();
 		void addGridColumn();
 		void removeGridRow();
 		void removeGridColumn();
 		void togglePause();
-		void moveTexCoord(int texCoordIndex, ofVec2f by);
+		void moveTexCoord(int texCoordIndex, Vec2 by);
 		// TODO: Add moveVertex.
 		// Make it so that other parts of the application react to the change.
 		void undo();
@@ -163,7 +166,7 @@ class Application {
 		float _lastSaveTime;
 		float _autoSaveInterval;
 
-		string _keySequence;
+		std::string _keySequence;
 
 };
 

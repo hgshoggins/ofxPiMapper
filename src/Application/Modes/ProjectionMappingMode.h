@@ -9,6 +9,8 @@
 #include "SurfaceType.h"
 #include "Gui.h"
 #include "ScaleWidget.h"
+#include "Vec2.h"
+#include "Vec3.h"
 
 namespace ofx {
 namespace piMapper {
@@ -38,7 +40,7 @@ class ProjectionMappingMode : public ApplicationBaseMode {
 	
 		float _surfaceScaleBeforeTransform;
 	
-		ofVec2f _clickPosition;
+		Vec2 _clickPosition;
 	
 		bool _bSurfaceDrag;
 		bool _bDrawLayerPanel;
