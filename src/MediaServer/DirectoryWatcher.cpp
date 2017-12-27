@@ -8,6 +8,7 @@ DirectoryWatcher::DirectoryWatcher(std::string path, int watcherMediaType){
 	_mediaType = watcherMediaType;
 
 	if(_mediaType == SourceType::SOURCE_TYPE_VIDEO){
+		_directory.allowExt("mkv");
 		_directory.allowExt("mp4");
 		_directory.allowExt("h264");
 		_directory.allowExt("mov");
