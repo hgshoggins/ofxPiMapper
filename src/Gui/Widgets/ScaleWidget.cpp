@@ -1,5 +1,8 @@
 #include "ScaleWidget.h"
-#include "glm/geometric.hpp"
+
+#if OF_VERSION_MAJOR == 0 && OF_VERSION_MINOR > 9
+	#include "glm/geometric.hpp"
+#endif
 
 namespace ofx {
 namespace piMapper {
@@ -127,8 +130,6 @@ void ScaleWidget::onMouseDragged(ofMouseEventArgs & args){
 		}
 		
 		ofRectangle box = _surfaceManager->getSelectedSurface()->getBoundingBox();
-		float boxAspect = box.width / box.height;
-		
 		ofPolyline newLine = _line;
 		newLine[1].x = args.x;
 		newLine[1].y = args.y;

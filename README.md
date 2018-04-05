@@ -1,6 +1,6 @@
 # ofxPiMapper
 
-[![Join the chat at https://gitter.im/kr15h/ofxPiMapper](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kr15h/ofxPiMapper?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/kr15h/ofxPiMapper](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/kr15h/ofxPiMapper?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Build Status](https://travis-ci.org/kr15h/ofxPiMapper.svg?branch=master)](https://travis-ci.org/kr15h/ofxPiMapper) [![Build status](https://ci.appveyor.com/api/projects/status/j6mn85tt2agk4dk6?svg=true)](https://ci.appveyor.com/project/kr15h/ofxpimapper)
 
 Projection mapping addon for openFrameworks that runs on the Raspberry Pi.
 
@@ -24,6 +24,15 @@ You can use the example application of the addon for projection mapping projects
     ./bin/example -f
     ```
 
+## Extended Functionality
+
+Examples represent extended functionality of ofxPiMapper. Enter each example separately to find out more.
+
+- [Basic Example](example_basic).
+- [FBO Sources Example](example_fbo-sources).
+- [Remote Control Server](example_remote-server) example.
+- [Remote Control Client](example_remote-client) example.
+- Readme's for the rest are cooking...
 
 ## Compiling on Linux
 
@@ -88,7 +97,7 @@ Keeping it simple. Developing ofxPiMapper master branch against the latest stabl
 
 ## Licence
 
-ofxPiMapper is distributed under the [MIT License](https://en.wikipedia.org/wiki/MIT_License). See the [LICENSE](LICENSE.md) file for further details. Just add my name somewhere along your project [Krisjanis Rijnieks](https://rijnieks.com) whenever possible. And join [my workshops](https://ofxpimapper.com/workshops).
+ofxPiMapper is distributed under the [MIT License](https://en.wikipedia.org/wiki/MIT_License). See the [LICENSE](LICENSE.md) file for further details. Just add my name somewhere along your project [Krisjanis Rijnieks](https://rijnieks.com) whenever possible. 
 
 
 ## Dependencies

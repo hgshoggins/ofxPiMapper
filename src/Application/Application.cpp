@@ -102,7 +102,7 @@ void Application::onKeyPressed(ofKeyEventArgs & args){
 		 break;
 
 	 case '/':
-		 _shiftKeyDown = !_shiftKeyDown;
+		 toggleShift();
 		 break;
 
 	 case '1':
@@ -228,6 +228,11 @@ void Application::setState(ApplicationBaseMode * st){
 }
 
 bool Application::isShiftKeyDown(){
+	return _shiftKeyDown;
+}
+
+bool Application::toggleShift(){
+	_shiftKeyDown = !_shiftKeyDown;
 	return _shiftKeyDown;
 }
 
@@ -561,6 +566,12 @@ void Application::undo(){
 void Application::deselect(){
 	if(getSurfaceManager()->getSelectedSurface() != 0){
 		getCmdManager()->exec(new DeselectSurfaceCmd(getSurfaceManager()));
+	}
+}
+
+void Application::toggleLayerPanel(){
+	if(getState() == ProjectionMappingMode::instance()){
+		ProjectionMappingMode::instance()->toggleLayerPanel();
 	}
 }
 

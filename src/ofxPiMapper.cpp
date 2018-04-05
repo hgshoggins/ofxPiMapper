@@ -162,6 +162,22 @@ void ofxPiMapper::eraseSurface(int i){
 	}
 }
 
+void ofxPiMapper::addGridColumn(){
+	_application.addGridColumn();
+}
+
+void ofxPiMapper::removeGridColumn(){
+	_application.removeGridColumn();
+}
+
+void ofxPiMapper::addGridRow(){
+	_application.addGridRow();
+}
+
+void ofxPiMapper::removeGridRow(){
+	_application.removeGridRow();
+}
+
 void ofxPiMapper::setNextSource(){
 	_application.setNextSource();
 }
@@ -218,6 +234,10 @@ void ofxPiMapper::deselect(){
 	_application.deselect();
 }
 
+bool ofxPiMapper::toggleShift(){
+	return _application.toggleShift();
+}
+
 void ofxPiMapper::setMode(ofx::piMapper::Mode m){
 	if(m == ofx::piMapper::PRESENTATION_MODE){
 		_application.setPresentationMode();
@@ -243,4 +263,8 @@ ofx::piMapper::Mode ofxPiMapper::getMode(){
 		return ofx::piMapper::SOURCE_MODE;
 	}
 	return ofx::piMapper::PRESENTATION_MODE;
+}
+
+void ofxPiMapper::toggleLayerPanel(){
+	_application.toggleLayerPanel();
 }

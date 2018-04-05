@@ -32,10 +32,14 @@ class ofxPiMapper {
 		void toggleInfo();
 		void undo();
 		void deselect();
+		bool toggleShift();
 
 		// Modes
 		void setMode(ofx::piMapper::Mode m);
 		ofx::piMapper::Mode getMode();
+	
+		// Projection mapping mode only
+		void toggleLayerPanel();
 
 		// Project
 		void saveProject();
@@ -71,6 +75,12 @@ class ofxPiMapper {
 		void moveSelection(ofx::piMapper::Vec3 by);
 		void createSurface(ofx::piMapper::SurfaceType type);
 		void eraseSurface(int i);
+	
+		// Specifically for GridWarpSurface
+		void addGridColumn();
+		void removeGridColumn();
+		void addGridRow();
+		void removeGridRow();
 
 		// Sources, selected surface
 		void setNextSource();
